@@ -11,17 +11,7 @@ using namespace std;
 
 int main()
 {
-    /*ofstream file("Client.txt");
-    file.close();*/
-    /*ofstream file("Employee.txt");
-    file.close();*/
-    /*ofstream file("Admin.txt");
-    file.close();*/
-    /*ofstream file("text.txt");
-    file<<"this is my first\n";
-    file<<"this is my first\n";
-    file<<"this is my first\n";
-    file.close();*/
+
 
     Admin m;
     m.Setname(Validation::Entername());
