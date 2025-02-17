@@ -23,11 +23,11 @@ int main()
     file<<"this is my first\n";
     file.close();*/
 
-    /*Admin m;
+    Admin m;
     m.Setname(Validation::Entername());
     m.Setpassword(Validation::Enterpassword());
     m.Setid(Validation::Enterid());
     m.Setsalary(Validation::Entersalary());
     m.Display();
-    return 0;*/
+    return 0;
 }
