@@ -40,7 +40,7 @@ public:
         return password;
     }
     void Display(){
-        cout << "Id: " << Getid() << " .\n";
+        cout << "\nId: " << Getid() << " .\n";
         cout << "Name: " << Getname() << " .\n";
         cout << "Password: " << Getpassword() << " .\n";
     }

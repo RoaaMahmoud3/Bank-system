@@ -18,8 +18,9 @@ int main() {
     Client client2(2, "Bob", "securepass", 3000);
 
     // Adding clients
-     cout << "Adding clients...\n";
+    cout << "Adding clients...\n";
     fileManager.AddClient(client1);
+
     fileManager.AddClient(client2);
 
     // Static data for employees
@@ -27,7 +28,7 @@ int main() {
     Employee employee2(2, "David", "empPass2", 5000);
 
     // Adding employees
-     cout << "\nAdding employees...\n";
+    cout << "\nAdding employees...\n";
     fileManager.AddEmployee(employee1);
     fileManager.AddEmployee(employee2);
 
@@ -36,24 +37,24 @@ int main() {
     Admin admin2(2, "Frank", "adminPass2", 7000);
 
     // Adding admins
-     cout << "\nAdding admins...\n";
+    cout << "\nAdding admins...\n";
     fileManager.AddAdmin(admin1);
     fileManager.AddAdmin(admin2);
 
     // Display all clients
-     cout << "\nAll Clients:\n";
+    cout << "\nAll Clients:\n";
     fileManager.GetAllClients();
 
     // Display all employees
-     cout << "\nAll Employees:\n";
+    cout << "\nAll Employees:\n";
     fileManager.GetAllEmployees();
 
     // Display all admins
-     cout << "\nAll Admins:\n";
+    cout << "\nAll Admins:\n";
     fileManager.GetAllAdmins();
 
-    // Remove all clients
-  /*   cout << "\nRemoving all clients...\n";
+   /* // Remove all clients
+     cout << "\nRemoving all clients...\n";
     fileManager.RemoveAllClients();
      cout << "Clients after removal:\n";
     fileManager.GetAllClients(); // Should show no clients
@@ -68,7 +69,7 @@ int main() {
      cout << "\nRemoving all admins...\n";
     fileManager.RemoveAllAdmins();
      cout << "Admins after removal:\n";
-    fileManager.GetAllAdmins(); // Should show no admins */
+    fileManager.GetAllAdmins(); // Should show no admins*/
 
     return 0;
 }

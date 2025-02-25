@@ -47,15 +47,15 @@ public:
         }
     }
 
-    void RemoveAllClients(){
+    void RemoveAllClients() override {
         FileHelper::clearFile("Clients.txt", "ClientLastId.txt");
     }
 
-    void RemoveAllEmployees(){
+    void RemoveAllEmployees() override {
         FileHelper::clearFile("Employees.txt", "EmployeeLastId.txt");
     }
 
-    void RemoveAllAdmins(){
+    void RemoveAllAdmins() override {
         FileHelper::clearFile("Admins.txt", "AdminLastId.txt");
     }
 };
