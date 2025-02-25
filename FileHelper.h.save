@@ -53,7 +53,6 @@ public:
     }
 
     static  vector<Client> getClients() {
-        vector<Client> allClients;
         string line;
         ifstream file("Clients.txt");
         while ( getline(file, line)) {
@@ -65,7 +64,6 @@ public:
     }
 
     static  vector<Employee> getEmployees() {
-        vector<Employee> allEmployees;
         string line;
         ifstream file("Employees.txt");
         while ( getline(file, line)) {
@@ -77,7 +75,7 @@ public:
     }
 
     static  vector<Admin> getAdmins() {
-        vector<Admin> allAdmins;
+
         string line;
         ifstream file("Admins.txt");
         while ( getline(file, line)) {
@@ -91,7 +89,7 @@ public:
     static void clearFile(const  string& fileName, const  string& lastIdFile) {
         ofstream file1(fileName,  ios::trunc);
         file1.close();
-        ofstream file2(lastIdFile );
+        ofstream file2(lastIdFile , ios::trunc);
         file2 << 0;
         file2.close();
     }

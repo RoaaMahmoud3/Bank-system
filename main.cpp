@@ -16,6 +16,7 @@ int main() {
     // Static data for clients
     Client client1(1, "Alice", "password123", 2000);
     Client client2(2, "Bob", "securepass", 3000);
+    Client client3(3, "Mona", "password555", 5000);
 
     // Adding clients
     cout << "Adding clients...\n";
@@ -26,6 +27,7 @@ int main() {
     // Static data for employees
     Employee employee1(1, "Charlie", "empPass1", 4000);
     Employee employee2(2, "David", "empPass2", 5000);
+    employee1.AddClient(client3);
 
     // Adding employees
     cout << "\nAdding employees...\n";
@@ -53,7 +55,15 @@ int main() {
     cout << "\nAll Admins:\n";
     fileManager.GetAllAdmins();
 
-   /* // Remove all clients
+    ///////////////
+    if(employee1.SearchClient(1))
+        cout<<"\ntrue\n";
+
+     employee1.ListClient();
+
+
+
+    // Remove all clients
      cout << "\nRemoving all clients...\n";
     fileManager.RemoveAllClients();
      cout << "Clients after removal:\n";
@@ -69,7 +79,7 @@ int main() {
      cout << "\nRemoving all admins...\n";
     fileManager.RemoveAllAdmins();
      cout << "Admins after removal:\n";
-    fileManager.GetAllAdmins(); // Should show no admins*/
+    fileManager.GetAllAdmins(); // Should show no admins
 
     return 0;
 }

@@ -58,6 +58,16 @@ public:
     void RemoveAllAdmins(){
         FileHelper::clearFile("Admins.txt", "AdminLastId.txt");
     }
+    void UpdateClient(){
+        RemoveAllClients();
+        for(cit= allClients.begin() ; cit != allClients.end() ; cit++)
+            AddClient(*cit);
+    }
+    void UpdateEmployees(){
+        RemoveAllEmployees();
+        for(eit= allEmployees.begin() ; eit != allEmployees.end() ; eit++)
+           AddEmployee(*eit);
+    }
 };
 
 #endif // FILEMANAGER_H

@@ -53,7 +53,6 @@ public:
     }
 
     static  vector<Client> getClients() {
-        vector<Client> allClients;
         string line;
         ifstream file("Clients.txt");
         while ( getline(file, line)) {
@@ -65,7 +64,6 @@ public:
     }
 
     static  vector<Employee> getEmployees() {
-        vector<Employee> allEmployees;
         string line;
         ifstream file("Employees.txt");
         while ( getline(file, line)) {
@@ -77,7 +75,6 @@ public:
     }
 
     static  vector<Admin> getAdmins() {
-        vector<Admin> allAdmins;
         string line;
         ifstream file("Admins.txt");
         while ( getline(file, line)) {

@@ -1,2 +1,0 @@
-1&Eve&adminPass1&6000
-2&Frank&adminPass2&7000
