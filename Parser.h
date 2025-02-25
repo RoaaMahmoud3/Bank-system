@@ -11,15 +11,26 @@ using namespace std;
 
 class Parser {
 public:
-    static  vector< string> Split(string line) {
-         vector< string> result;
-         stringstream ss(line);
-         string item;
-        while (getline(ss, item, ',')) {
+    static vector<string> Split(string line) {
+        vector<string> result;
+        string item;
+
+        for (char ch : line) {
+            if (ch == '&') {
+                result.push_back(item);
+                item.clear();
+            }
+            else {
+                item += ch;
+            }
+        }
+        if (!item.empty()) {
             result.push_back(item);
         }
+
         return result;
     }
+
 
     static Client ParseToClient(string line) {
          vector< string> tokens = Split(line);
