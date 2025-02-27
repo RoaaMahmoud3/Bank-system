@@ -29,7 +29,7 @@ public:
         Person::Display();
         cout<<"Salary : "<<Getsalary()<<" .\n";
     }
-    void addClient(Client& client){
+    void AddClient(Client& client){
         allClients.push_back(client);
     }
     Client* SearchClient(int id){

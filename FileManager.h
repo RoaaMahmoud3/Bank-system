@@ -27,22 +27,23 @@ public:
     }
 
     void GetAllClients(){
-         vector<Client> clients = FileHelper::getClients();
-        for (Client client : clients) {
+         //vector<Client> clients = FileHelper::getClients();
+         FileHelper::getClients();
+        for (Client client : allClients) {
             client.Display();
         }
     }
 
     void GetAllEmployees(){
-         vector<Employee> employees = FileHelper::getEmployees();
-        for (Employee employee : employees) {
+        FileHelper::getEmployees();
+        for (Employee employee : allEmployees) {
             employee.Display();
         }
     }
 
     void GetAllAdmins(){
-         vector<Admin> admins = FileHelper::getAdmins();
-        for (Admin admin : admins) {
+        FileHelper::getAdmins();
+        for (Admin admin : allAdmins) {
             admin.Display();
         }
     }
@@ -58,7 +59,8 @@ public:
     void RemoveAllAdmins(){
         FileHelper::clearFile("Admins.txt", "AdminLastId.txt");
     }
-    void UpdateClient(){
+    ////////////////////////////////////////////////////////////////////
+    void UpdateClients(){
         RemoveAllClients();
         for(cit= allClients.begin() ; cit != allClients.end() ; cit++)
             AddClient(*cit);
@@ -67,6 +69,11 @@ public:
         RemoveAllEmployees();
         for(eit= allEmployees.begin() ; eit != allEmployees.end() ; eit++)
            AddEmployee(*eit);
+    }
+    void UpdateAdmins(){
+        RemoveAllAdmins();
+        for(ait= allAdmins.begin() ; ait != allAdmins.end() ; ait++)
+           AddAdmin(*ait);
     }
 };
 

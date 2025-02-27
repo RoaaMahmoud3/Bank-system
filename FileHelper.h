@@ -88,7 +88,7 @@ public:
     static void clearFile(const  string& fileName, const  string& lastIdFile) {
         ofstream file1(fileName,  ios::trunc);
         file1.close();
-        ofstream file2(lastIdFile , ios::trunc);
+        ofstream file2(lastIdFile,  ios::trunc );
         file2 << 0;
         file2.close();
     }
