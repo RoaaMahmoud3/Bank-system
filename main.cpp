@@ -26,20 +26,22 @@ int main() {
 
     // Static data for clients
 
-    Client client1(1, "Alice44", "password123", 2000);
-    Client client2(2, "Bob68", "securepass", 3000);
-    Client client3(1, "Mona", "password555", 5000);
+    Client client1(100, "Alice44", "password123", 2000);
+    Client client2(235, "Bob68", "securepass", 3000);
+    Client client3(101, "Mona", "password555", 5000);
 
     // Adding clients
-    cout << "Adding clients...\n";
+    /*cout << "Adding clients...\n";
     fileManager.AddClient(client1);
 
-    fileManager.AddClient(client2);
+    fileManager.AddClient(client2);*/
     //fileManager.AddClient(m);
 
     // Static data for employees
     Employee employee1(459, "Charlie", "empPass1", 4000);
     Employee employee2(444, "David", "empPass2", 5000);
+    Employee employee3(455, "Ali", "empss2", 5000);
+
     employee1.AddClient(client3);
 
     // Adding employees
@@ -50,7 +52,7 @@ int main() {
     // Static data for admins
     Admin admin1(1, "Eve", "adminPass1", 6000);
     Admin admin2(2, "Frank", "adminPass2", 7000);
-
+    admin1.AddEmployee(employee3);
     // Adding admins
     cout << "\nAdding admins...\n";
     fileManager.AddAdmin(admin1);
@@ -58,9 +60,9 @@ int main() {
     //
 
     // Display all clients
-    cout << "\nAll Clients:\n";
+    /*cout << "\nAll Clients:\n";
     fileManager.GetAllClients();
-    cout<<"\n============================================================\n";
+    cout<<"\n============================================================\n";*/
 
     // Display all employees
     cout << "\nAll Employees:\n";
