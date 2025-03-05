@@ -12,17 +12,17 @@
 using namespace std;
 
 class FileHelper {
-public:
+private:
     static void SaveLast(const  string& fileName, int Id) {
         ofstream file(fileName);
         file << Id;
         file.close();
     }
 
-
+public:
     static int getLast(const  string& fileName) {
         ifstream file(fileName);
-        int Id = 0;
+        int Id ;
         file >> Id;
         file.close();
         return Id;
@@ -52,7 +52,8 @@ public:
         SaveLast("AdminLastId.txt", id + 1);
     }
 
-    static  vector<Client> getClients() {
+    static  void getClients() {
+        allClients.clear();
         string line;
         ifstream file("Clients.txt");
         while ( getline(file, line)) {
@@ -60,10 +61,10 @@ public:
             allClients.push_back(c);
         }
         file.close();
-        return allClients;
     }
 
-    static  vector<Employee> getEmployees() {
+    static  void getEmployees() {
+        allEmployees.clear();
         string line;
         ifstream file("Employees.txt");
         while ( getline(file, line)) {
@@ -71,10 +72,10 @@ public:
             allEmployees.push_back(e);
         }
         file.close();
-        return allEmployees;
     }
 
-    static  vector<Admin> getAdmins() {
+    static  void getAdmins() {
+        allAdmins.clear();
         string line;
         ifstream file("Admins.txt");
         while ( getline(file, line)) {
@@ -82,7 +83,7 @@ public:
             allAdmins.push_back(a);
         }
         file.close();
-        return allAdmins;
+
     }
 
     static void clearFile(const  string& fileName, const  string& lastIdFile) {

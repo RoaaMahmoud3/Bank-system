@@ -27,18 +27,11 @@ public:
     }
 
     void GetAllClients(){
-         //vector<Client> clients = FileHelper::getClients();
          FileHelper::getClients();
-        for (Client client : allClients) {
-            client.Display();
-        }
     }
 
     void GetAllEmployees(){
         FileHelper::getEmployees();
-        for (Employee employee : allEmployees) {
-            employee.Display();
-        }
     }
 
     void GetAllAdmins(){

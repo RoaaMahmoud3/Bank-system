@@ -10,7 +10,7 @@
 using namespace std;
 
 class Parser {
-public:
+private:
     static vector<string> Split(string line) {
         vector<string> result;
         string item;
@@ -31,7 +31,7 @@ public:
         return result;
     }
 
-
+public:
     static Client ParseToClient(string line) {
          vector< string> tokens = Split(line);
         return Client( stoi(tokens[0]), tokens[1], tokens[2],  stod(tokens[3]));

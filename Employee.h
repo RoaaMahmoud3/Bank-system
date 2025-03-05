@@ -31,7 +31,7 @@ public:
     }
     void AddClient(Client& client){
         allClients.push_back(client);
-        //FileManager::AddClient(client);
+
     }
     Client* SearchClient(int id){
         for(cit= allClients.begin() ; cit != allClients.end() ; cit++){
