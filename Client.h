@@ -11,6 +11,7 @@ class Client: public Person{
 private:
     double balance;
 public:
+
     Client() {
        this->balance = 0;
     }

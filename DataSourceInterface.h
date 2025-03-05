@@ -11,9 +11,9 @@ using namespace std;
 class DataSourceInterface
 {
 public:
-    virtual void AddClient( Client client)=0 ;
-    virtual void AddEmployee( Employee employee)=0 ;
-    virtual void AddAdmin( Admin admin)=0 ;
+    virtual void AddClient( Client )=0 ;
+    virtual void AddEmployee( Employee )=0 ;
+    virtual void AddAdmin( Admin )=0 ;
 
     virtual void GetAllClients()  =0;
     virtual void GetAllEmployees()  =0;
