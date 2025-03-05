@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<vector>
 #include"Validation.h"
 #include "Person.h"
 #include "Client.h"
@@ -20,7 +21,7 @@ int main() {
 
 
 
-
+    cout<<allClients.size();
     //////////////////////////////////////
     FileManager fileManager;
 

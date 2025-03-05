@@ -14,7 +14,7 @@ using namespace std;
 
 class FileManager : public DataSourceInterface {
 public:
-    static void AddClient(Client client){
+    void AddClient(Client client){
         FileHelper::saveClient(client);
     }
 
