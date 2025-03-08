@@ -25,7 +25,7 @@ private:
     static bool isValidSalary(double salary) {
         return salary >= 5000;
     }
-
+    
 
 public:
 

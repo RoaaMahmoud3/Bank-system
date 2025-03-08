@@ -7,6 +7,7 @@
 #include "Employee.h"
 #include "Admin.h"
 #include "FileManager.h"
+#include "AdminManager.h"
 #include<fstream>
 using namespace std;
 
@@ -18,7 +19,6 @@ int main() {
     m.Setid(Validation::Enterid());
     m.Setbalance(Validation::Enterbalance());
     m.Display();*/
-
 
 
     //////////////////////////////////////
@@ -42,7 +42,12 @@ int main() {
     Admin admin1(1, "Eve", "adminPass1", 6000);
     Admin admin2(2, "Frank", "adminPass2", 7000);
 
-    // Adding admins
+
+
+    AdminManager::AdminOptions( &admin1 );
+
+
+    /*// Adding admins
     cout << "\nAdding admins...\n";
     fileManager.AddAdmin(admin1);
     fileManager.AddAdmin(admin2);
@@ -78,7 +83,7 @@ int main() {
 
     fileManager.UpdateClients();
     fileManager.UpdateEmployees();
-    fileManager.UpdateEmployees();
+    fileManager.UpdateEmployees();*/
     ///////////////
     /*(employee1.SearchClient(1))
         cout<<"\ntrue\n";*/

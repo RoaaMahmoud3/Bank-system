@@ -7,6 +7,7 @@
 #include "Employee.h"
 #include "Admin.h"
 #include "FileManager.h"
+#include "AdminManager.h"
 #include<fstream>
 using namespace std;
 
@@ -18,7 +19,6 @@ int main() {
     m.Setid(Validation::Enterid());
     m.Setbalance(Validation::Enterbalance());
     m.Display();*/
-
 
 
     //////////////////////////////////////
@@ -37,12 +37,17 @@ int main() {
     Employee employee3(455, "Ali", "empss2", 5000);
 
     ///////////////////////////////////////////////
-    
+
     // Static data for admins
     Admin admin1(1, "Eve", "adminPass1", 6000);
     Admin admin2(2, "Frank", "adminPass2", 7000);
-    
-    // Adding admins
+
+
+
+    AdminManager::AdminOptions( admin1& );
+
+
+    /*// Adding admins
     cout << "\nAdding admins...\n";
     fileManager.AddAdmin(admin1);
     fileManager.AddAdmin(admin2);
@@ -60,7 +65,7 @@ int main() {
     admin1.AddEmployee(employee1);
     admin1.AddEmployee(employee2);
     admin1.AddEmployee(employee3);
-    
+
     // Display all clients
     cout << "\nAll Clients:\n";
     employee1.ListClient();
@@ -75,10 +80,10 @@ int main() {
     cout << "\nAll Admins:\n";
     fileManager.GetAllAdmins();
     cout<<"\n============================================================\n";
-    
+
     fileManager.UpdateClients();
     fileManager.UpdateEmployees();
-    fileManager.UpdateEmployees();
+    fileManager.UpdateEmployees();*/
     ///////////////
     /*(employee1.SearchClient(1))
         cout<<"\ntrue\n";*/
@@ -101,6 +106,7 @@ int main() {
     fileManager.RemoveAllAdmins();
     cout << "Admins after removal:\n";
     fileManager.GetAllAdmins(); // Should show no admins*/
+
     cout<<allClients.size()<<"/"<<allEmployees.size()<<endl;
     cout << "Total Clients in allClients: " << allClients.size() << endl;
     cout << "Total Employees in allEmployees: " << allEmployees.size() << endl;
