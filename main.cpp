@@ -8,6 +8,7 @@
 #include "Admin.h"
 #include "FileManager.h"
 #include "AdminManager.h"
+#include "ClientManger.h"
 #include<fstream>
 using namespace std;
 
@@ -45,6 +46,7 @@ int main() {
 
 
     AdminManager::AdminOptions( &admin1 );
+    ClientManger::ClientOptions( &client1);
 
 
     /*// Adding admins
