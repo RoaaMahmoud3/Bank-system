@@ -28,6 +28,15 @@ public:
             return loginAs();
         }
     }
+    static void invalid(int c){
+        cout<<"Error password or id .\n";
+        loginScreen(c);
+    }
+    static void logout(){
+        loginScreen(login)
+    }
+    static void loginScreen(int c){}
+    
 };
 
 #endif // SCREENS_H
