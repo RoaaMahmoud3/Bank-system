@@ -40,7 +40,6 @@ public:
         int choice,id;
         cin>>choice;
         cout<<endl;
-        FileManager fileManager;
         switch(choice){
         case 1:
             client->Display();
@@ -56,7 +55,7 @@ public:
             cout<<"Enter amount to Withdraw : ";
             cin>>amount;
             client->Withdraw(amount);
-            fileManager.UpdateClients();
+            FileMaUpdateClients();
             break;
         }
         case 5:{
@@ -76,7 +75,7 @@ public:
             }
             cout<<"Enter amount to transfer : ";
             cin>>amount;
-            client->Transfer(amount , &(e->SearchClient(id)));
+            client->Transfer(amount , *(e.SearchClient(id)));
             fileManager.UpdateClients();
             break;
         }
@@ -85,10 +84,10 @@ public:
             break;
         default:
             cout << "Invalid option, please try again.\n";
-            ClientOptions(Client);
+            ClientOptions(client);
             return true;
         }
-        ClientOptions(Client);
+        ClientOptions(client);
         return true;
     }
 

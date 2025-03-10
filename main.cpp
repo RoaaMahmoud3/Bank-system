@@ -10,6 +10,7 @@
 #include "AdminManager.h"
 #include "ClientManger.h"
 #include<fstream>
+#include "EmployeeManager.h"
 using namespace std;
 
 
@@ -45,8 +46,9 @@ int main() {
 
 
 
-    AdminManager::AdminOptions( &admin1 );
-    ClientManger::ClientOptions( &client1);
+    //AdminManager::AdminOptions( &admin1 );
+    //ClientManger::ClientOptions( &client1);
+    EmployeeManager::employeeOptions(&employee1);
 
 
     /*// Adding admins

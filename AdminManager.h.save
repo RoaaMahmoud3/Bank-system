@@ -8,6 +8,7 @@
 #include "Employee.h"
 #include "FileManager.h"
 #include "FileHelper.h"
+#include "ClientManger.h"
 
 class AdminManager
 {
@@ -24,8 +25,9 @@ public:
         cout<<"6. Search about Employee .\n";
         cout<<"7. List of Employees .\n";
         cout<<"8. Edit Employee .\n";
-        cout<<"9. Print information about Admin\n";
-        cout<<"10. Log out .\n";
+        cout<<"9. Print information about Admin .\n";
+        cout<<"10. Update Password .\n";
+        cout<<"11. Log out .\n";
         cout<<"=========================\n";
     }
 
@@ -69,7 +71,7 @@ public:
             break;
         }
         case 3:
-            f
+            //FileManager::UpdateClients();
             cout<<"All clients : \n";
             admin->ListClient();
             break;
@@ -142,7 +144,12 @@ public:
         case 9:
             admin->Display();
             break;
+
         case 10:
+            ClientManger::UpdatePassword(admin);
+            fileManager.UpdateAdmins();
+            break;
+        case 11:
             return false;
             break;
         default:
