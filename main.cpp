@@ -46,7 +46,7 @@ int main() {
 
 
     AdminManager::AdminOptions( &admin1 );
-    ClientManger::ClientOptions( &client1);
+    //ClientManger::ClientOptions( &client1);
 
 
     /*// Adding admins
