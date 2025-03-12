@@ -36,9 +36,9 @@ public:
 
     void GetAllAdmins(){
         FileHelper::getAdmins();
-        for (Admin admin : allAdmins) {
+        /*for (Admin admin : allAdmins) {
             admin.Display();
-        }
+        }*/
     }
 
     void RemoveAllClients(){
