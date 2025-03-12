@@ -11,6 +11,7 @@
 #include "ClientManger.h"
 #include<fstream>
 #include "EmployeeManager.h"
+#include "Screens.h"
 using namespace std;
 
 
@@ -44,11 +45,11 @@ int main() {
     Admin admin1(1, "Eve", "adminPass1", 6000);
     Admin admin2(2, "Frank", "adminPass2", 7000);
 
-
+    Screens::runApp();
 
     //AdminManager::AdminOptions( &admin1 );
     //ClientManger::ClientOptions( &client1);
-    EmployeeManager::employeeOptions(&employee1);
+    //EmployeeManager::employeeOptions(&employee1);
 
 
     /*// Adding admins

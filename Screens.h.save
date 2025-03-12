@@ -1,6 +1,6 @@
 #ifndef SCREENS_H
 #define SCREENS_H
-
+#include "FileManager.h"
 
 class Screens
 {
@@ -33,10 +33,65 @@ public:
         loginScreen(c);
     }
     static void logout(){
-        loginScreen(login)
+        loginScreen(loginAs());
     }
-    static void loginScreen(int c){}
-    
+    static void loginScreen(int c){
+        int id;
+        string password;
+
+        cout << "Enter ID: ";
+        cin >> id;
+        cout << "Enter Password: ";
+        cin >> password;
+
+        switch (c) {
+            case 1: {
+                Client* client = ClientManger::login(id, password);
+                if (client) {
+                    ClientManger::ClientOptions(client);
+                } else {
+                    invalid(c);
+                }
+                break;
+            }
+            case 2: {
+                Employee* employee = EmployeeManager::login(id, password);
+                if (employee) {
+                    EmployeeManager::employeeOptions(employee);
+                } else {
+                    invalid(c);
+                }
+                break;
+            }
+            case 3: {
+                Admin* admin = AdminManager::login(id, password);
+                if (admin) {
+                    AdminManager::AdminOptions(admin);
+                } else {
+                    invalid(c);
+                }
+                break;
+            }
+            default:
+                cout << "Invalid option.\n";
+        }
+    }
+    static void runApp() {
+        FileManager fileManager;
+        fileManager.GetAllAdmins();
+        fileManager.GetAllClients();
+        fileManager.GetAllEmployees();
+        bankName();
+        welcome();
+        int choice;
+        while ((choice = loginAs()) != 0) {
+            loginScreen(choice);
+            cout << "Thank you for using Bloom Bank. Goodbye!\n";
+            cout<<"===========================================\"
+        }
+        
+    }
+
 };
 
 #endif // SCREENS_H
